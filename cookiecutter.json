@@ -2,5 +2,6 @@
     "project_name": "project_name",
     "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
     "author_name": "Sasha Mikheyev",
-    "description": "A short description of the project."
+    "description": "A short description of the project.",
+    "open_source_license": "MIT"
 }
