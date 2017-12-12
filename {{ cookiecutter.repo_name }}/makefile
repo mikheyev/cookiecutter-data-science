@@ -1,5 +1,5 @@
 # variables for running snakemake from a variable
-rule ?= all	# run rule all by default, which is the default behavior anyway
+rule ?= all		# run rule all by default, which is the default behavior anyway
 restart ?= 0	# by default do not restart failed jobs
 
 dry:
