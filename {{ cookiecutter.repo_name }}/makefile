@@ -12,3 +12,5 @@ rmout:
 	rm -f *.out
 rmdone:
 	grep -r -l -Z 'Finished job ' *.out | xargs -0 rm
+run:
+	snakemake --restart-times $(restart) -j 500 -p --max-jobs-per-second 1  --cluster-config cluster.json --cluster "sbatch -p {cluster.partition} --cpus-per-task {threads} -t {resources.time} --mem {resources.mem}G"     --rerun-incomplete --notemp --nolock --use-conda $(rule)
